@@ -7,4 +7,4 @@ local_Port=int(sys.argv[2])
 target = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)     # Creazione socket
 target.bind((local_IP,local_Port))                            # Associazione a porta e interfaccia 
 data, source = target.recvfrom(400)                           # Attesa e ricezione
-print(data, "from", source)                                    # Stampa
+print(data.decode('utf8'), "from", source)                                   # Stampa
