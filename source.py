@@ -5,4 +5,4 @@ if len(sys.argv) != 3:                                        # Controllo parame
 remote_IP=sys.argv[1]                                         # Acquisizione parametri
 remote_Port=int(sys.argv[2])
 source = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)     # Creazione socket
-source.sendto("Hallo", (remote_IP,remote_Port))               # Invio
+source.sendto("Hallo".encode('utf8'), (remote_IP,remote_Port))               # Invio
